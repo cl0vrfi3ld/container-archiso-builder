@@ -20,4 +20,4 @@ Run the container with the command below and archiso will start building your im
     
 Note that `sudo` or `pkexec` is required for podman to access various privileged interfaces (hence the `--privileged` flag)!
 
-One the ISO build is done, go to the new `./out` directory to find your iso image!
+Once the image build is done, go to the new `./out` directory to find your iso image!
