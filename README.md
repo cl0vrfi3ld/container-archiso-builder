@@ -8,11 +8,11 @@ Make sure you've published your archiso files to a publicly accessible git repos
 
 To build the image, run:
 
-    podman build --rm -t container-archiso-builder:latest .
+    podman build --rm -t me/container-archiso-builder:latest .
 
 You can also pull the latest image available by running:
 
-    podman pull nlhomme/archiso-builder
+    podman pull ghcr.io/cl0vrfi3ld/archiso-builder:latest
 
 Run the container with the command below and archiso will start building your image:
 
