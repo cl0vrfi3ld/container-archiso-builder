@@ -8,15 +8,15 @@ Make sure you've published your archiso files to a publicly accessible git repos
 
 To build the image, run:
 
-    `podman build --rm -t container-archiso-builder:latest .`
+    podman build --rm -t container-archiso-builder:latest .
 
 You can also pull the latest image available by running:
 
-    `podman pull nlhomme/archiso-builder`
+    podman pull nlhomme/archiso-builder
 
 Run the container with the command below and archiso will start building your image:
 
-    `sudo podman run --rm -v ./out:/out -t -i --privileged ghcr.io/cl0vrfi3ld/archiso-builder:latest "https://gitsomething.com/your/os-image-repo.git"`
+    sudo podman run --rm -v ./out:/out -t -i --privileged ghcr.io/cl0vrfi3ld/archiso-builder:latest "https://gitsomething.com/your/os-image-repo.git"
     
 Note that `sudo` or `pkexec` is required for podman to access various privileged interfaces (hence the `--privileged` flag)!
 
