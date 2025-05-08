@@ -12,11 +12,11 @@ To build the image, run:
 
 You can also pull the latest image available by running:
 
-    podman pull ghcr.io/cl0vrfi3ld/archiso-builder:latest
+    podman pull ghcr.io/cl0vrfi3ld/container-archiso-builder:latest
 
 Run the container with the command below and archiso will start building your image:
 
-    sudo podman run --rm -v ./out:/out -t -i --privileged ghcr.io/cl0vrfi3ld/archiso-builder:latest "https://gitsomething.com/your/os-image-repo.git"
+    sudo podman run --rm -v ./out:/out -t -i --privileged ghcr.io/cl0vrfi3ld/container-archiso-builder:latest -r "https://gitsomething.com/your/os-image-repo.git" < -b branch >
     
 Note that `sudo` or `pkexec` is required for podman to access various privileged interfaces (hence the `--privileged` flag)!
 
