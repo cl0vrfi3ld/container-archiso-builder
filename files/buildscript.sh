@@ -8,7 +8,7 @@ cd /root/
 # echo "Example: https://github.com/nlhomme/lhoslite"
 # read repository
 
-Repo="https://github.com/cl0vrfi3ld/clos-image-builder.git"
+Repo=""
 Branch="main"
 
 # parse args
@@ -27,10 +27,10 @@ while getopts "r:b:" o; do
 done
 
 #Clone the provided repo
-git clone $Repo
+git clone $Repo archisoimg
 
 #Go to this new working folder
-cd $(echo $Repo|grep -oP '/([A-Za-z0-9]+\.[A-Za-z]+\/[A-Za-z0-9]+\/)\K([A-Za-z0-9]+(?:-[A-Za-z0-9]+)+)(?=\.git)')
+cd archisoimg
 
 git checkout ${Branch}
 
