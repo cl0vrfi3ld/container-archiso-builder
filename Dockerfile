@@ -4,7 +4,7 @@
 # TO_RUN           : docker run --rm -v /tmp:/tmp -t -i --privileged nlhomme/archiso-builder:latest
 ##
 
-FROM archlinux:latest
+FROM docker.io/archlinux:latest
 #MAINTAINER nlhomme (https://github.com/nlhomme/archiso-builder)
 
 #Sync package databases and update
