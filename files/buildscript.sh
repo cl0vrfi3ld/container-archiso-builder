@@ -34,6 +34,8 @@ cd archisoimg
 
 git checkout ${Branch}
 
+chmod +x ./build.sh
+chown $USER:$USER ./build.sh
 #Run the script to build the ISO
 ./build.sh -v
 
