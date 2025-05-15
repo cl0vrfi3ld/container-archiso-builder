@@ -8,11 +8,31 @@ cd /root/
 # echo "Example: https://github.com/nlhomme/lhoslite"
 # read repository
 
+Repo=""
+Branch="main"
+
+# parse args
+while getopts "r:b:" o; do
+    case "${o}" in
+        r)
+            Repo=${OPTARG}
+            ;;
+        b)
+            Branch=${OPTARG}
+            ;;
+        *)
+            exit
+            ;;
+    esac
+done
+
 #Clone the provided repo
-git clone $@
+git clone $Repo archisoimg
 
 #Go to this new working folder
-cd $(echo $@|grep -oP '/([A-Za-z0-9]+\.[A-Za-z]+\/[A-Za-z0-9]+\/)\K([A-Za-z0-9]+(?:-[A-Za-z0-9]+)+)(?=\.git)')
+cd archisoimg
+
+git checkout ${Branch}
 
 #Run the script to build the ISO
 ./build.sh -v
