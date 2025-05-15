@@ -36,6 +36,7 @@ git checkout ${Branch}
 
 chown -R $USER:$USER ./
 chmod +x ./build.sh
+
 #Run the script to build the ISO
 ./build.sh -v
 
